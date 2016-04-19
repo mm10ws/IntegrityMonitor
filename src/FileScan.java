@@ -3,20 +3,20 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Scanner {
+public class FileScan {
     public String root = "";
     public ArrayList<String> listOfFiles = new ArrayList<String>();
     public ArrayList<String> listOfDirs = new ArrayList<String>();
     public FileHash fh = new FileHash();
     public String fileData = "";
 
-    public Scanner(String root) {
+    public FileScan(String root) {
 
         this.root = root;
     }
 
     public static void main(String args[]) {
-        Scanner s = new Scanner(""); //set root directory here
+        FileScan s = new FileScan(""); //set root directory here
 
         try {
             s.scan(s.getRoot(), true);

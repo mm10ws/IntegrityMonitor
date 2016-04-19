@@ -79,7 +79,7 @@ public class Monitor {
                 e.printStackTrace();
             }
 
-            Scanner s = new Scanner(this.root);
+            FileScan s = new FileScan(this.root);
             String newData = s.scan(s.getRoot(), false);
             try (BufferedReader b = new BufferedReader(new StringReader(newData))) {
                 String row;
