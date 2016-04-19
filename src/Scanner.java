@@ -83,6 +83,7 @@ public class Scanner {
     }
 
     public String scan(String path, boolean outputToFile) {
+        this.fileData = "";
         try {
             this.scanDir(path);
         } catch (Exception e) {
