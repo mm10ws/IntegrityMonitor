@@ -81,6 +81,11 @@ public class FileScan {
             }
         }
     }
+    /*
+    helper function for scanDir method
+    input: directory absolute path (string), option to output file and hash data as snapshot file (boolean)
+    output: string representation of snapshot file (string)
+     */
 
     public String scan(String path, boolean outputToFile) {
         this.fileData = "";
@@ -110,7 +115,11 @@ public class FileScan {
 
         return this.fileData;
     }
-
+    /*
+    scans a target directory and subdirectories and stores file and hash values as string
+    input: absolute path of target directory (string)
+    output: void,
+     */
     public void scanDir(String path) throws Exception {
         File currentDir = new File(path);
         fileData += currentDir.getAbsoluteFile() + ",";

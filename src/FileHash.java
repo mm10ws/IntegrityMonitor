@@ -4,7 +4,6 @@ import java.security.MessageDigest;
 
 public class FileHash {
 
-
     public static void main(String args[]) {
 
         FileHash fh = new FileHash();
@@ -18,6 +17,12 @@ public class FileHash {
 
         //System.out.println("hello world");
     }
+
+    /*
+    gives the SHA-256 hash given the absolute path to a file
+    inputs: absolute path of file (string)
+    output: SHA-256 hash of file (string)
+     */
 
     public String hashFile(String fileName) throws Exception{
         MessageDigest m = MessageDigest.getInstance("SHA-256");
@@ -43,6 +48,12 @@ public class FileHash {
 
         return s.toString();
     }
+
+    /*
+    gives the SHA-256 hash given a file object
+    inputs: file (File)
+    output: SHA-256 hash of file (string)
+     */
 
     public String hashFile(File f) throws Exception {
         MessageDigest m = MessageDigest.getInstance("SHA-256");

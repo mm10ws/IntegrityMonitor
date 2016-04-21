@@ -9,7 +9,7 @@ public class Driver {
         System.out.println("Target directory set to " + root);
 
 
-        int option = -1;
+        int option = -1; //menu option
 
 
         while (true) {
@@ -17,16 +17,20 @@ public class Driver {
             System.out.println("1. Create new snapshot");
             System.out.println("2. Create report");
             System.out.println("3. Exit");
+
             int choice = reader.nextInt();
+
+            //make sure choice is in valid range
             if (choice >= 1 && choice <= 3) {
                 if (choice == 1) {
                     System.out.println("Scanning " + root);
                     FileScan s = new FileScan(root);
                     FileHash f = new FileHash();
-                    s.scan(root, true);
+                    s.scan(root, true); //scan target and create snapshot file
 
                     System.out.print("Snapshot created: ");
 
+                    //hash the snapshot file and display to user
                     try {
                         String hash = f.hashFile("snapshot");
                         System.out.println(hash);
@@ -36,6 +40,7 @@ public class Driver {
 
                 } else if (choice == 2) {
                     FileHash f = new FileHash();
+                    //hash the snapshot file and display to user
                     try {
                         String hash = f.hashFile("snapshot");
                         System.out.println("Snapshot hash value: " + hash);
