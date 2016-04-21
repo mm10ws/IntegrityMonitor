@@ -1,3 +1,8 @@
+/*
+Implements secure hashing of files with SHA-256
+author: mm
+ */
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.security.MessageDigest;

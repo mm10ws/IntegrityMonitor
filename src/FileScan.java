@@ -1,3 +1,8 @@
+/*
+Implement the recursive traversal and enumeration of the target directory and also the generation of the snapshot file.
+author: mm
+ */
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -38,6 +43,9 @@ public class FileScan {
 //        }
     }
 
+    /*
+    getters and setter
+     */
     public String getRoot() {
 
         return root;
@@ -81,6 +89,7 @@ public class FileScan {
             }
         }
     }
+
     /*
     helper function for scanDir method
     input: directory absolute path (string), option to output file and hash data as snapshot file (boolean)
@@ -118,7 +127,7 @@ public class FileScan {
     /*
     scans a target directory and subdirectories and stores file and hash values as string
     input: absolute path of target directory (string)
-    output: void,
+    output: appends each file to fileData String
      */
     public void scanDir(String path) throws Exception {
         File currentDir = new File(path);

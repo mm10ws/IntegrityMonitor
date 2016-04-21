@@ -1,3 +1,8 @@
+/*
+implements the command line interface and handles user input
+author: mm
+ */
+
 import java.util.Scanner;
 
 public class Driver {
